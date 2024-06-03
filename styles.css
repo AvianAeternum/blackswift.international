@@ -1,0 +1,142 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #B1C8FF, #FFFFFF);
+    color: #333;
+}
+.outer-container {
+    width: calc(100vw - 80px); /* 40px padding on each side */
+    height: calc(100vh - 80px); /* 40px padding on each side */
+    border: 2px solid white; /* Changed to 2px */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.navbar {
+    width: calc(100% - 40px); /* 40px margin on each side */
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+}
+.navbar .nav-left, .navbar .nav-right {
+    display: flex;
+    align-items: center;
+}
+.navbar button {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+.navbar button:hover {
+    color: #555;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+.popup h2 {
+    margin-top: 0;
+}
+.popup form div {
+    margin-bottom: 15px;
+}
+.popup form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.popup form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.popup form button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.popup form button:hover:enabled {
+    background-color: #555;
+}
+#error-message {
+    color: #d9534f;
+    display: none;
+    border: 1px solid #d9534f;
+    background-color: #f2dede;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+.about-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 80px); /* Adjust the width to prevent overflow */
+    flex-grow: inherit; /* Add this to make the box take up the remaining space */
+    text-align: left;
+    position: absolute; /* Add this to position the box */
+    top: 90px;
+    left: 20px; /* Adjust this to align with the navbar */
+    right: 20px; /* Adjust this to align with the navbar */
+    overflow: auto; /* Add this to enable scrolling if the content is larger than the box */
+}
+.about-box h2 {
+    margin-top: 0;
+}
